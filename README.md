@@ -4,9 +4,10 @@ This README document the required steps to deploy a worker and join the public W
 
 ## What is this repository for? ##
 
-* In this repository we show 2 ways of deploying your worker:
+* In this repository we show 3 ways of deploying your worker:
     * Using docker-compose - For more advanced users. This gives you more control over your worker and allows you to easier debug issues
     * Using vagrant - this is a one-click deployment for less advanced users
+    * Using cloud provisioned VM like AWS EC2 or Azure VM
 * Version: 1.0.0
 
 ---
