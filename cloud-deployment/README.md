@@ -1,0 +1,66 @@
+# README #
+
+This README documments cloud deployment of the worker. We will not describe here how to spin AWS EC2 instance or Azure VM.
+In this readme we focus on starting a worker on a clean already provicioned machines.   
+**Remember you NEED to have Worker Pass NFT on the worker's wallet before connecting to the pool**
+
+### What is this repository for? ###
+
+* **Quick summary**   
+    This repository provides scripts which setup clean VM and start a worker
+* **Version:** 1.0.0
+
+### How do I get set up? ###
+
+* **Summary of set up**
+    1. You need to have provisioned VM - ubuntu or AWS-linux
+    2. Copy there the correct script in the desired location
+    3. Run the script
+
+* **Configuration**   
+    Setup scripts take care of configuring the mahcine and start the worker. You need to make sure you provide required enfironment variables to the script.
+* **Dependencies**   
+    You don't need any dependencies installed apart from the clean linux
+* **How to run**    
+    You can either run it with .env file or by providing required variables to the script in the command line
+
+    * **Running with .env**  
+    Fill in the .env file with your private key to the wallet
+
+        ```sh
+        # REQUIRED VARIABLES:
+        PRIVATE_KEY=0x123                             # Your private key to the wallet
+        PROD_CORE_HOST=workerpool.iexecenterprise.com # This is the IP of the workerpool
+
+        # Optional variables:
+        WORKER_NAME=My_First_Worker_Name              # Set the name of your worker
+        PROD_WALLET_PASSWORD=mySecretPassword         # Change this password to the one you've used for your wallet
+
+        # Availiable CPU for worker will be automatically set to availiable CPU on host machine -1
+        # FORCE_WORKER_AVAILABLE_CPU=1                # uncomment only if you want to force availiable CPU for worker
+        ```
+        
+        Paste the contents of the correct setup script to the file.   
+        Give it a execution rights `sudo chmod +x setup.sh`.    
+        Run - `./setup.sh`
+
+    * **Running with a command line**  
+        Paste the contents of the correct setup script to the file. Give it an execution rights `sudo chmod +x setup.sh`  
+        Run:  
+
+        ```sh
+        PRIVATE_KEY=0x1234... PROD_CORE_HOST=workerpool.iexecenterprise.com ./setup.sh
+        ```
+
+### Additional commands ###
+
+* Check the logs of your worker
+
+    ```sh
+    docker-compose logs worker # to follow the new logs use -f flag $ docker-compose logs -f worker
+    ```
+    
+### Who do I talk to? ###
+
+* Repo owner or admin - jacek.janczura [at] knowledgex.com
+* Other community or team contact - create an issue in this repo

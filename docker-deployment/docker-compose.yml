@@ -1,0 +1,46 @@
+version: '3.6'
+
+networks:
+  worker-net:
+    name: worker-net
+
+services:
+  worker:
+    image: iexechub/iexec-worker:${WORKER_TAG:-7.1.0}
+    container_name: worker
+    environment:
+      - IEXEC_WORKER_SCONTAIN_REGISTRY_USERNAME=$SCONTAIN_REGISTRY_USERNAME
+      - IEXEC_WORKER_SCONTAIN_REGISTRY_PASSWORD=$SCONTAIN_REGISTRY_PASSWORD
+      - IEXEC_DEVELOPER_LOGGER_ENABLED=False
+      - IEXEC_WORKER_DOCKER_NETWORK_NAME=worker-net
+      - IEXEC_CORE_HOST=${PROD_CORE_HOST:-workerpool.iexecenterprise.com}
+      - IEXEC_CORE_PORT=7001
+      - IEXEC_CORE_PROTOCOL=https
+      - IEXEC_WORKER_WALLET_PATH=/${WALLET:-worker_wallet.json}
+      - IEXEC_WORKER_WALLET_PASSWORD=${PROD_WALLET_PASSWORD:-mySecretPassword}
+      # WORKER_NAME is used for child containers names and for passing results from compute to post-compute. The folder $IEXEC_WORKER_BASE_DIR/$IEXEC_WORKER_NAME is then mounted in both compute ans post-compute containers.
+      # The worker service reads things in it as well. Better keep things simple and use the same folder on host and all 3 containers.  
+      - IEXEC_WORKER_NAME=${WORKER_NAME:-My_Default_Worker_Name}
+      - IEXEC_WORKER_BASE_DIR=$RESULTS_DIR
+      
+      - IEXEC_WORKER_OVERRIDE_BLOCKCHAIN_NODE_ADDRESS=https://bellecour.iex.ec
+
+      - IEXEC_WORKER_OVERRIDE_AVAILABLE_CPU_COUNT=${WORKER_AVAILABLE_CPU:-1} 
+
+      - IEXEC_CORE_GRAYLOG_HOST=
+      - IEXEC_WORKER_GPU_ENABLED=False
+      - IEXEC_GAS_PRICE_MULTIPLIER=0
+      - IEXEC_GAS_PRICE_CAP=0
+      - IEXEC_WORKER_SGX_DRIVER_MODE=NONE
+      - IEXEC_WORKER_DOCKER_REGISTRY_ADDRESS_1=${REGISTRY_ADDRESS:-}
+      - IEXEC_WORKER_DOCKER_REGISTRY_USERNAME_1=${REGISTRY_USERNAME:-}
+      - IEXEC_WORKER_DOCKER_REGISTRY_PASSWORD_1=${REGISTRY_PASSWORD:-}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - $RESULTS_DIR/${WORKER_NAME:-My_Default_Worker_Name}:$RESULTS_DIR/${WORKER_NAME:-My_Default_Worker_Name}
+      - ./${WALLET:-worker_wallet.json}:/${WALLET:-worker_wallet.json}:rw
+    restart: unless-stopped
+    networks:
+      worker-net:
+        aliases:
+          - worker
