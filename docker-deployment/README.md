@@ -78,9 +78,9 @@ To confirm you have that NFT visit:
 Execute the following command to provision your iExec-Worker VM
 
 1. First clone this repository -   
-`git clone git@bitbucket.org:jadenx/iexec-worker-setup.git`
+`gh repo clone iExecBlockchainComputing/wpwp-worker-setup`
 2. Change directory to docker-deployment   
-`cd ./iexec-worker-setup/docker-deployment`
+`cd ./wpwp-worker-setup/docker-deployment`
 3. Create iexec wallet
     * Import your Ethereum wallet using your private key into the wallet file (Remember about the dot at the end!):  
 
