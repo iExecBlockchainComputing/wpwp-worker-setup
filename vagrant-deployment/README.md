@@ -81,8 +81,8 @@ To confirm you have that NFT visit:
 
 Execute the following command to provision your iExec-Worker VM
 
-1. First clone/download this repository - `git clone git@bitbucket.org:jadenx/iexec-worker-setup.git`
-2. Change directory to vagrant-deployment `cd ./iexec-worker-setup/vagrant-deployment`
+1. First clone/download this repository - `git clone git@github.com:iExecBlockchainComputing/wpwp-worker-setup.git`
+2. Change directory to vagrant-deployment `cd ./wpwp-worker-setup/vagrant-deployment`
 3. Configure the following variables in the worker_config.properties file.
     * WALLET_PRIVATE_KEY: This must be set when you want to set your worker with your existing wallet. You must not set this value if you want to create a new wallet. 
 
