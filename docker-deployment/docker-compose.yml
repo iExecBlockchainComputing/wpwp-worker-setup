@@ -6,7 +6,7 @@ networks:
 
 services:
   worker:
-    image: iexechub/iexec-worker:${WORKER_TAG:-7.1.0}
+    image: iexechub/iexec-worker:${WORKER_TAG:-7.2.0}
     container_name: worker
     environment:
       - IEXEC_WORKER_SCONTAIN_REGISTRY_USERNAME=$SCONTAIN_REGISTRY_USERNAME
