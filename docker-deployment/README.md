@@ -37,17 +37,6 @@ To confirm you have that NFT visit:
 * Verify the number of CPUs on your machine. You'll later assign to your worker number of CPU from your machine:
 
     ```sh
-    $ lscpu | egrep 'Model name|Socket|Thread|NUMA|CPU\(s\)'
-
-    CPU(s):              4
-    On-line CPU(s) list: 0-3
-    Thread(s) per core:  2
-    Socket(s):           1
-    NUMA node(s):        1
-    Model name:          AMD EPYC 7571
-    NUMA node0 CPU(s):   0-3
-    
-    # If the above command doesn't work try the following
     $ echo "Threads/core: $(nproc --all)"
 
     CPU threads: 4
@@ -72,6 +61,44 @@ To confirm you have that NFT visit:
     In this machine, we have 6 cors
 
     Or follow the instructions from this [link](https://www.top-password.com/blog/find-number-of-cores-in-your-cpu-on-windows-10/)
+
+### Prerequisites MacOs ###
+
+* Install the following tools on your machine:
+    * [Homebrew](https://brew.sh/) - MacOs Package manager
+
+        ```sh
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        ```
+    * [Docker](https://docs.docker.com/desktop/install/windows-install/) with docker-compose
+
+        ```sh
+        brew install docker
+        brew install docker-compose
+        ```
+
+    * Install Node at least v16 - we recommend using [nvm](https://github.com/coreybutler/nvm-windows#readme)
+
+        ```sh
+        brew install nvm
+        export NVM_DIR="$HOME/.nvm"
+        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+        [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+        # Install node v16
+        nvm install v16
+        nvm use v16
+        ```
+
+    * install [iExec CLI](https://github.com/iExecBlockchainComputing/iexec-sdk#cli) - `npm install -g iexec`
+* Verify the number of CPUs on your machine using CMD:  
+
+    ```sh
+    $ sysctl hw.physicalcpu
+    hw.physicalcpu: 16
+    ```
+
+    In this machine, we have 16 cors
 
 ### Configure Project ###
 
@@ -162,6 +189,5 @@ docker-compose up -d
 
 ## Who do I talk to? ##
 
-* Repo owner or admin - jacek.janczura [at] knowledgex.com
-* Other community or team contact - sandip.sabale [at] knowledgex.com
+* Repo owner or admin
 * Open an issue in this repo

@@ -3,18 +3,24 @@
 Run iExec Worker
 
 * Quick summary - This README documents the steps to set up a worker and join a workerpool using Vagrant
+    * [Vagrant](https://www.vagrantup.com/) - an open-source software product for building and maintaining portable virtual software development environments
+    * [VirtualBox](https://www.virtualbox.org/) - an open-source powerful virtualization product for enterprise as well as home use
 * Version - 1.0.0
 
 ---
 
 ## How do I get set up? ##
 
-Please confirm you have installed all dependencies mentioned in the Prerequisites step.   
 Remember your worker needs to have WorkerPassWorkerPool NFT on your wallet to join Worker Pass Worker Pool.
 
 To confirm you have that NFT visit:   
 [https://blockscout-bellecour.iex.ec/address/YourWalletaddress/tokens](https://blockscout-bellecour.iex.ec/address/0x587dcc67c6AB1ea86E4AA043a1282d584B05BFCc/tokens)
 
+Please confirm you have installed all dependencies mentioned in the Prerequisites step.   
+
+## Prerequisites
+
+In this step pick your operationg system - Linux/Macos/Windows and follow the steps
 
 ### Prerequisites Windows ###
 
@@ -38,7 +44,7 @@ To confirm you have that NFT visit:
     
     ( This number will be required soon while configuring the Vagrant file.)
 
-### Prerequisites Linux and macOS ###
+### Prerequisites Linux ###
 
 * Good Internet connection.
 
@@ -74,6 +80,44 @@ To confirm you have that NFT visit:
     ```
     
     In this machine, there are 4 cores
+    
+    (This number will be required soon while configuring the Vagrant file.)
+
+### Prerequisites MacOs ###
+ 
+Remember this instruction won't work on the newest Macbook with M1 silicon
+
+* Good Internet connection.
+
+* Step 1: Install brew and update packages
+
+    ```sh
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    sudo apt-get -y install git-all &&
+    ```
+    
+* Step 2: Install VirtualBox
+
+    ```sh
+    brew install --cask virtualbox
+    ```
+
+* Step 3: Install Vagrant
+
+    ```sh
+    brew install --cask vagrant
+    ```
+
+
+* Verify the number of CPUs on your machine:
+
+    ```sh
+    $ sysctl hw.physicalcpu
+    hysicalcpu
+    hw.physicalcpu: 16
+    ```
+    
+    In this machine, there are 16 cores
     
     (This number will be required soon while configuring the Vagrant file.)
 
@@ -123,7 +167,7 @@ Start your worker using Vagrant and VM
 ```sh
 vagrant up
 ```
-This will provision a VM for your worker, craete, start and connect your worker to our workerpool.
+This will provision a VM for your worker, create, start and connect your worker to our workerpool.
 
 ***Remember you need to have Worker Pass NFT on the worker's wallet.***   
 
@@ -170,5 +214,5 @@ You must see your worker name (WORKER_NAME) in the list of workers. Which you ha
 
 ## Who do I talk to? ##
 
-* Repo owner or admin - jacek.janczura [at] knowledgex.com
+* Repo owner or admin
 * Open an issue in this repo
