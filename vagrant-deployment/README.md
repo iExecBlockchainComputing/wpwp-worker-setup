@@ -16,7 +16,7 @@ Remember your worker needs to have WorkerPassWorkerPool NFT on your wallet to jo
 To confirm you have that NFT visit:   
 [https://blockscout-bellecour.iex.ec/address/YourWalletaddress/tokens](https://blockscout-bellecour.iex.ec/address/0x587dcc67c6AB1ea86E4AA043a1282d584B05BFCc/tokens)
 
-Please confirm you have installed all dependencies mentioned in the Prerequisites step.   
+After you verified that you have the NFT in your wallet please confirm you have installed all dependencies mentioned in the Prerequisites step.   
 
 ## Prerequisites
 
@@ -97,7 +97,7 @@ Remember this instruction won't work on the newest Macbook with M1 silicon
 
 * Step 0: Open Terminal - click Command+Space, type terminal and press enter
 
-* Step 1: Install brew and git
+* Step 1: Install homebrew package manager and git
 
     ```sh
     # Install brew
@@ -121,7 +121,6 @@ Remember this instruction won't work on the newest Macbook with M1 silicon
     ```sh
     brew install --cask vagrant
     ```
-
 
 * Verify the number of CPUs on your machine:
 
