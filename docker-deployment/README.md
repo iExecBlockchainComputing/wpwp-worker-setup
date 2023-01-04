@@ -30,24 +30,13 @@ To confirm you have that NFT visit:
 * Install the following tools on your machine - pick the correct script - ubuntu or aws linux. If you use some other Linux distribution you'll need to modify the scripts yourself 
 
     ```sh
-    sudo chmod +x setup.sh 
-    ./ setup_linux.sh
+    sudo chmod +x setup-ubuntu.sh 
+    ./ setup-ubuntu.sh
     ```
 
 * Verify the number of CPUs on your machine. You'll later assign to your worker number of CPU from your machine:
 
     ```sh
-    $ lscpu | egrep 'Model name|Socket|Thread|NUMA|CPU\(s\)'
-
-    CPU(s):              4
-    On-line CPU(s) list: 0-3
-    Thread(s) per core:  2
-    Socket(s):           1
-    NUMA node(s):        1
-    Model name:          AMD EPYC 7571
-    NUMA node0 CPU(s):   0-3
-    
-    # If the above command doesn't work try the following
     $ echo "Threads/core: $(nproc --all)"
 
     CPU threads: 4
@@ -73,6 +62,44 @@ To confirm you have that NFT visit:
 
     Or follow the instructions from this [link](https://www.top-password.com/blog/find-number-of-cores-in-your-cpu-on-windows-10/)
 
+### Prerequisites MacOs ###
+
+* Install the following tools on your machine:
+    * [Homebrew](https://brew.sh/) - MacOs Package manager
+
+        ```sh
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        ```
+    * [Docker](https://docs.docker.com/desktop/install/windows-install/) with docker-compose
+
+        ```sh
+        brew install docker
+        brew install docker-compose
+        ```
+
+    * Install Node at least v16 - we recommend using [nvm](https://github.com/coreybutler/nvm-windows#readme)
+
+        ```sh
+        brew install nvm
+        export NVM_DIR="$HOME/.nvm"
+        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+        [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+        # Install node v16
+        nvm install v16
+        nvm use v16
+        ```
+
+    * install [iExec CLI](https://github.com/iExecBlockchainComputing/iexec-sdk#cli) - `npm install -g iexec`
+* Verify the number of CPUs on your machine using CMD:  
+
+    ```sh
+    $ sysctl hw.physicalcpu
+    hw.physicalcpu: 16
+    ```
+
+    In this machine, we have 16 cors
+
 ### Configure Project ###
 
 Execute the following command to provision your iExec-Worker VM
@@ -85,7 +112,10 @@ Execute the following command to provision your iExec-Worker VM
     * Import your Ethereum wallet using your private key into the wallet file (Remember about the dot at the end!):  
 
         ```sh
+        # Create Wallet
         iexec wallet import <private_key> --password mySecretPassword --keystoredir .
+
+        # Rename wallet
         mv UTC--* worker_wallet.json # Rename the wallet file
         ```
 
@@ -119,13 +149,12 @@ Execute the following command to provision your iExec-Worker VM
 
         $ mv UTC--* worker_wallet.json # Rename the wallet file
         ```
-4. Configure the following variables in the .env file:
+4. Copy contents of .env-defaults to .env and configure the following variables in the .env file:
     Remember to correctly set the number of availiable CPU.
 
     ```sh
     WORKER_AVAILABLE_CPU=2 # This is the number of available CPUs in your machine -1
-    PROD_CORE_HOST=workerpool.iexecenterprise.com
-    WORKER_NAME=My_First_Worker_Name
+    WORKER_NAME=My_First_Worker_Name # This is the name of your worker
     PROD_WALLET_PASSWORD=mySecretPassword # Change this password to the one you've used for your wallet
 
     # Optionally you can modify that if the worker doesn't want to start
@@ -162,6 +191,4 @@ docker-compose up -d
 
 ## Who do I talk to? ##
 
-* Repo owner or admin - jacek.janczura [at] knowledgex.com
-* Other community or team contact - sandip.sabale [at] knowledgex.com
-* Open an issue in this repo
+* [Open a support ticket](https://iexecproject.atlassian.net/servicedesk/customer/portal/4/group/9/create/73)

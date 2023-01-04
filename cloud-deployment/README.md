@@ -25,7 +25,7 @@ In this readme we focus on starting a worker on a clean already provicioned mach
     You can either run it with .env file or by providing required variables to the script in the command line
 
     * **Running with .env**  
-    Fill in the .env file with your private key to the wallet
+    copy .env-defaults to .env file and fill it in with your private key to the wallet
 
         ```sh
         # REQUIRED VARIABLES:
@@ -62,5 +62,4 @@ In this readme we focus on starting a worker on a clean already provicioned mach
     
 ### Who do I talk to? ###
 
-* Repo owner or admin - jacek.janczura [at] knowledgex.com
-* Other community or team contact - create an issue in this repo
+* [Open a support ticket](https://iexecproject.atlassian.net/servicedesk/customer/portal/4/group/9/create/73)

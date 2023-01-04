@@ -5,9 +5,9 @@ This README document the required steps to deploy a worker and join the public W
 ## What is this repository for? ##
 
 * In this repository we show 3 ways of deploying your worker:
-    * Using docker-compose - For more advanced users. This gives you more control over your worker and allows you to easier debug issues
-    * Using vagrant - this is a one-click deployment for less advanced users
-    * Using cloud provisioned VM like AWS EC2 or Azure VM
+    * **Using vagrant** - this is a one-click deployment for less advanced users. If you don't know how to use command line and docker this is option for you
+    * **Using docker-compose** - for more advanced users. This gives you more control over your worker and allows you to easier debug issues. To follow this steps you need to know how to use docker. We won't teach you basics. In this tutorial we assume you've already used docker and docker-compose
+    * **Using cloud** provisioned VM like AWS EC2 or Azure VM - for users who want to deploy whe worker in a cloud. This tutorial is for really andvanced users who know how to provision computing resources and connect to them. We won't teach you how to do it - we assume you know. In this tutorial we provide you with a one click scripts to fast and easy configure your Virtual Machine and deploy a worker in a cloud
 * Version: 1.0.0
 
 ---
@@ -53,13 +53,13 @@ In that case, restart the worker and restart the machine. If that didn't help co
 
 ## Disclaimer
 
-Unfortunately, you can yet run a worker in ARM-based CPU - ( Worker runs only on 64-bit (x84) architecture)   
+Unfortunately, you can't yet run a worker in ARM-based CPU - ( Worker runs only on 64-bit (x84) architecture)   
 It implies that it is **not possible** to run the worker on e.g. MacBooks with M1/M2 ARM-based silicons or AWS EC2 t4g instances. 
 
 ---
 
 ## Who do I talk to? ##
 
-* Repo owner or admin - jacek.janczura [at] knowledgex.com
+* Repo owner or admin
 * Other community or team contact - iexec support
 * Open an issue in this repo
