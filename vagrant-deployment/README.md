@@ -65,23 +65,21 @@ Or use terminal provided by git-bash you've installed in the previous step:
     
 * Step 2: Install VirtualBox
 
+    ```sh
+    sudo apt install virtualbox
+    ```
+
 * Step 3: Install Vagrant
 
+    ```sh
+    sudo apt-get -y install vagrant
+    # Verify installation
+    vagrant --version
+    ```
 
 * Verify the number of CPUs on your machine:
 
     ```sh
-    $ lscpu | egrep 'Model name|Socket|Thread|NUMA|CPU\(s\)'
-
-    CPU(s):              4
-    On-line CPU(s) list: 0-3
-    Thread(s) per core:  2
-    Socket(s):           1
-    NUMA node(s):        1
-    Model name:          AMD EPYC 7571
-    NUMA node0 CPU(s):   0-3
-    
-    # If the above command doesn't work try the following
     $ echo "Threads/core: $(nproc --all)"
 
     CPU threads: 4
@@ -139,9 +137,11 @@ Remember this instruction won't work on the newest Macbook with M1 silicon
 
 ### Configure Project ###
 
-Execute the following command to provision your iExec-Worker VM
-0. * Open terminal 
+Execute the following command to provision your iExec-Worker VM.  
+
+0. Open terminal 
  ![git-bash CMD image](images/git-bash.png)
+
 1. First clone/download this repository - `git clone git@github.com:iExecBlockchainComputing/wpwp-worker-setup.git`
 2. Change directory to vagrant-deployment `cd ./wpwp-worker-setup/vagrant-deployment`
     You can open this folder in explorer by using mouse or terminal
