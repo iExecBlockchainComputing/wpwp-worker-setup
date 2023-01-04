@@ -59,8 +59,8 @@ Or use terminal provided by git-bash you've installed in the previous step:
 * Step 1: Update Ubuntu Packages
 
     ```sh
-    sudo apt-get update -y &&
-    sudo apt-get -y install git-all &&
+    sudo apt-get update -y
+    sudo apt-get -y install git-all
     ```
     
 * Step 2: Install VirtualBox
@@ -144,7 +144,7 @@ Execute the following command to provision your iExec-Worker VM.
 
 1. First clone/download this repository - `git clone git@github.com:iExecBlockchainComputing/wpwp-worker-setup.git`
 2. Change directory to vagrant-deployment `cd ./wpwp-worker-setup/vagrant-deployment`
-    You can open this folder in explorer by using mouse or terminal
+    You can open this folder in explorer by using mouse cursor or terminal
 
     ```sh
     # Windows
@@ -157,8 +157,10 @@ Execute the following command to provision your iExec-Worker VM.
     nautilus .
     ```
 
-3. Configure the following variables in the worker_config.properties file in the `wpwp-worker-setup/vagrant-deployment/worker_config.properties` directory - you can use your prefered file viewer like notepad or VScode.
-    * WALLET_PRIVATE_KEY: This must be set when you want to set your worker with your existing wallet. You must not set this value if you want to create a new wallet. You can get your private key from metamask by following [this tutorial](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key#:~:text=On%20the%20account%20page%2C%20click,click%20%E2%80%9CConfirm%E2%80%9D%20to%20proceed.)
+3. Configure the following variables in the `worker_config.properties` file in the `wpwp-worker-setup/vagrant-deployment/worker_config.properties` directory - you can use your prefered file viewer like notepad or VScode to modify it.
+
+    * WALLET_PRIVATE_KEY: This must be configured when you want to setup the worker with your existing wallet. You must not set this value if you want to create a new wallet.   
+    You can get your private key from metamask by following [this tutorial](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key#:~:text=On%20the%20account%20page%2C%20click,click%20%E2%80%9CConfirm%E2%80%9D%20to%20proceed.)
 
         ```sh
         WALLET_PRIVATE_KEY=0x11627cbb3542c6091a3d9f715f2c26820e2363facea87d0cd0aeae3a87f81cfd
@@ -182,9 +184,11 @@ Execute the following command to provision your iExec-Worker VM.
         WORKER_NAME=My_First_Worker_Name
         ```     
         
-4. Configure the following variables in the Vagrantfile in the path `wpwp-worker-setup/vagrant-deployment/Vagrantfile` - line 21:
+4. Configure the following variables in the `Vagrantfile` in the path `wpwp-worker-setup/vagrant-deployment/Vagrantfile` - line 21:
 
-    This is the number of CPU cores available on your machine - 1 e.g. if you have 16 cores set this variable to maximum 15.
+    We recommend setting this variable to number of CPU cores available on your machine - 1 e.g. if you have 16 cores set this variable to a maximum of 15.
+    
+    This variable determines the maximum computing power you give to your worker. The more CPU cores are available for the worker the more RLC you'll earn.
    
     ```sh
     v.cpus = "1" # This is the number of CPUs you want to set for the Virtual Machine. It must be less than the number of CPUs available on your host machine.     
@@ -192,7 +196,7 @@ Execute the following command to provision your iExec-Worker VM.
 
 ### Set up your VM (Virtual Machine) and Worker ###
 
-Start your worker using Vagrant and VM
+Start your worker using Vagrant and VM. (Run this command in the terminal in the directory `wpwp-worker-setup/vagrant-deployment`)
 
 ```sh
 vagrant up
@@ -206,7 +210,7 @@ When your worker setup is successfully completed you should see the following me
 ```sh
 Worker was successfully started.
 ```
-First time The whole process will take time. (around 10 to 20 mins). So be patient and take a cofee! 
+First time The whole process will take time (around 10 to 20 mins). So be patient and grab some coffee! 
 
 ![Worker Started Successfully](images/worker_setup_success.png)
 
@@ -214,7 +218,7 @@ After worker starts successfully it will take 2 to 3 mins to join the worker poo
 
 You can confirm that by visiting [WorkerPass WorkerPool Grafana Portal](https://workerpool.iexecenterprise.com) 
 
-You must see your worker name (WORKER_NAME) in the list of workers. Which you have set in the file worker_config.properties and his wallet.
+You must see your worker name (WORKER_NAME) in the list of workers. You specified this name in the file `worker_config.properties` and its wallet.
 
 ![Worker Joined WorkerPool](images/worker_joined_worker_pool.png)
 
