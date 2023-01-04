@@ -157,7 +157,7 @@ Execute the following command to provision your iExec-Worker VM.
     nautilus .
     ```
 
-3. Configure the following variables in the worker_config.properties file - you can use your prefered file viewer like notepad or VScode.
+3. Configure the following variables in the worker_config.properties file in the `wpwp-worker-setup/vagrant-deployment/worker_config.properties` directory - you can use your prefered file viewer like notepad or VScode.
     * WALLET_PRIVATE_KEY: This must be set when you want to set your worker with your existing wallet. You must not set this value if you want to create a new wallet. You can get your private key from metamask by following [this tutorial](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key#:~:text=On%20the%20account%20page%2C%20click,click%20%E2%80%9CConfirm%E2%80%9D%20to%20proceed.)
 
         ```sh
@@ -182,9 +182,9 @@ Execute the following command to provision your iExec-Worker VM.
         WORKER_NAME=My_First_Worker_Name
         ```     
         
-4. Configure the following variables in the Vagrant file:
+4. Configure the following variables in the Vagrantfile in the path `wpwp-worker-setup/vagrant-deployment/Vagrantfile` - line 21:
 
-    This is the number of CPUs available on your machine - 1
+    This is the number of CPU cores available on your machine - 1 e.g. if you have 16 cores set this variable to maximum 15.
    
     ```sh
     v.cpus = "1" # This is the number of CPUs you want to set for the Virtual Machine. It must be less than the number of CPUs available on your host machine.     
