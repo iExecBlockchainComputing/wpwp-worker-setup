@@ -22,6 +22,7 @@ Please confirm you have installed all dependencies mentioned in the Prerequisite
 
 In this step pick your operationg system - Linux/Macos/Windows and follow the steps
 
+
 ### Prerequisites Windows ###
 
 * A Good Internet connection.
@@ -29,8 +30,15 @@ In this step pick your operationg system - Linux/Macos/Windows and follow the st
 * Install the following tools on your machine
     * [Vagrant- 2.3.2](https://developer.hashicorp.com/vagrant/downloads)
     * [Oracle VM VirtualBox - 7.X](https://www.virtualbox.org/wiki/Downloads)
-    
-* Verify the number of CPUs on your machine using CMD:  
+    * [Git](https://git-scm.com/download/win)
+
+* Open termianl - Press Windows+X to open the Power Users menu, and then click “Command Prompt” or “Command Prompt (Admin).”
+![Windows cmd image](images/windows-cmd.png)
+
+Or use terminal provided by git-bash you've installed in the previous step:
+![git-bash CMD image](images/git-bash.png)
+
+* Verify the number of CPUs on your machine using terminal:  
 
     ```sh
     $ wmic cpu get NumberOfCores,NumberOfLogicalProcessors
@@ -89,11 +97,19 @@ Remember this instruction won't work on the newest Macbook with M1 silicon
 
 * Good Internet connection.
 
-* Step 1: Install brew and update packages
+* Step 0: Open Terminal - click Command+Space, type terminal and press enter
+
+* Step 1: Install brew and git
 
     ```sh
+    # Install brew
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    sudo apt-get -y install git-all &&
+    brew update
+    brew upgrade
+    brew cleanup
+
+    # Install git
+    brew install git
     ```
     
 * Step 2: Install VirtualBox
@@ -124,11 +140,25 @@ Remember this instruction won't work on the newest Macbook with M1 silicon
 ### Configure Project ###
 
 Execute the following command to provision your iExec-Worker VM
-
+0. * Open terminal 
+ ![git-bash CMD image](images/git-bash.png)
 1. First clone/download this repository - `git clone git@github.com:iExecBlockchainComputing/wpwp-worker-setup.git`
 2. Change directory to vagrant-deployment `cd ./wpwp-worker-setup/vagrant-deployment`
-3. Configure the following variables in the worker_config.properties file.
-    * WALLET_PRIVATE_KEY: This must be set when you want to set your worker with your existing wallet. You must not set this value if you want to create a new wallet. 
+    You can open this folder in explorer by using mouse or terminal
+
+    ```sh
+    # Windows
+    start .
+
+    # MacOs
+    open .
+
+    # Ubuntu
+    nautilus .
+    ```
+
+3. Configure the following variables in the worker_config.properties file - you can use your prefered file viewer like notepad or VScode.
+    * WALLET_PRIVATE_KEY: This must be set when you want to set your worker with your existing wallet. You must not set this value if you want to create a new wallet. You can get your private key from metamask by following [this tutorial](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key#:~:text=On%20the%20account%20page%2C%20click,click%20%E2%80%9CConfirm%E2%80%9D%20to%20proceed.)
 
         ```sh
         WALLET_PRIVATE_KEY=0x11627cbb3542c6091a3d9f715f2c26820e2363facea87d0cd0aeae3a87f81cfd
@@ -214,5 +244,4 @@ You must see your worker name (WORKER_NAME) in the list of workers. Which you ha
 
 ## Who do I talk to? ##
 
-* Repo owner or admin
-* Open an issue in this repo
+* [Open a support ticket](https://iexecproject.atlassian.net/servicedesk/customer/portal/4/group/9/create/73)

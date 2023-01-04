@@ -30,8 +30,8 @@ To confirm you have that NFT visit:
 * Install the following tools on your machine - pick the correct script - ubuntu or aws linux. If you use some other Linux distribution you'll need to modify the scripts yourself 
 
     ```sh
-    sudo chmod +x setup.sh 
-    ./ setup_linux.sh
+    sudo chmod +x setup-ubuntu.sh 
+    ./ setup-ubuntu.sh
     ```
 
 * Verify the number of CPUs on your machine. You'll later assign to your worker number of CPU from your machine:
@@ -112,7 +112,10 @@ Execute the following command to provision your iExec-Worker VM
     * Import your Ethereum wallet using your private key into the wallet file (Remember about the dot at the end!):  
 
         ```sh
+        # Create Wallet
         iexec wallet import <private_key> --password mySecretPassword --keystoredir .
+
+        # Rename wallet
         mv UTC--* worker_wallet.json # Rename the wallet file
         ```
 
@@ -146,13 +149,12 @@ Execute the following command to provision your iExec-Worker VM
 
         $ mv UTC--* worker_wallet.json # Rename the wallet file
         ```
-4. Configure the following variables in the .env file:
+4. Copy contents of .env-defaults to .env and configure the following variables in the .env file:
     Remember to correctly set the number of availiable CPU.
 
     ```sh
     WORKER_AVAILABLE_CPU=2 # This is the number of available CPUs in your machine -1
-    PROD_CORE_HOST=workerpool.iexecenterprise.com
-    WORKER_NAME=My_First_Worker_Name
+    WORKER_NAME=My_First_Worker_Name # This is the name of your worker
     PROD_WALLET_PASSWORD=mySecretPassword # Change this password to the one you've used for your wallet
 
     # Optionally you can modify that if the worker doesn't want to start
@@ -189,5 +191,4 @@ docker-compose up -d
 
 ## Who do I talk to? ##
 
-* Repo owner or admin
-* Open an issue in this repo
+* [Open a support ticket](https://iexecproject.atlassian.net/servicedesk/customer/portal/4/group/9/create/73)
