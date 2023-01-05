@@ -1,4 +1,8 @@
-system('./scripts/generateSSH_keys.bat')
+if Vagrant::Util::Platform.windows? then
+  system('./scripts/generateSSH_keys.bat')
+else
+  system('./scripts/generateSSH_keys.sh')
+end
 
 Vagrant.configure("2") do |config| 
   

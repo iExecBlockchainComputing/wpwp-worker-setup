@@ -60,6 +60,4 @@ It implies that it is **not possible** to run the worker on e.g. MacBooks with M
 
 ## Who do I talk to? ##
 
-* Repo owner or admin
-* Other community or team contact - iexec support
-* Open an issue in this repo
+* [Open a support ticket](https://iexecproject.atlassian.net/servicedesk/customer/portal/4/group/9/create/73)
