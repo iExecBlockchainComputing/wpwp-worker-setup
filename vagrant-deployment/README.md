@@ -141,7 +141,7 @@ Execute the following command to provision your iExec-Worker VM.
 0. Open terminal 
  ![git-bash CMD image](images/git-bash.png)
 
-1. First clone/download this repository - `git clone git@github.com:iExecBlockchainComputing/wpwp-worker-setup.git`
+1. First clone/download this repository - `git clone https://github.com/iExecBlockchainComputing/wpwp-worker-setup.git`
 2. Change directory to vagrant-deployment `cd ./wpwp-worker-setup/vagrant-deployment`
     You can open this folder in explorer by using mouse cursor or terminal
 
