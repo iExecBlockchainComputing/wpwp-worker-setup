@@ -272,9 +272,10 @@ In this chapter we gather possible issues and frequently asked questions
 
 ### Strange message after `vagrant up`
 
-Don't worry. Check if you see your worker in grafana dashboard - [WorkerPass WorkerPool Grafana Portal](https://workerpool.iexecenterprise.com)  If it's there - congratulations, your worker runs correctly
+Don't worry. Check if you see your worker in grafana dashboard - [WorkerPass WorkerPool Grafana Portal](https://workerpool.iexecenterprise.com)  
+If it's there - congratulations, your worker runs correctly
 
-![Windows cmd image](images/windows-cmd.png)
+![Possible error image](images/possible_error.png)
 
 
 ---
