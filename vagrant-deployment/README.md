@@ -233,6 +233,27 @@ You must see your worker name (WORKER_NAME) in the list of workers. You specifie
 
 ### Additional commands ###
 
+* SSH to your worker
+    
+    ```sh
+    vagrant ssh
+    ```
+
+* Check if docker image with your worker is running and what is its ID
+
+    ```sh
+    # First you need to connect to the image over ssh or open virtualbox desktop. 
+    # Then open terminal and run
+    docker ps
+    ```
+
+* Check worker‘s logs
+
+    ```sh
+    # First you need to connect to the image over ssh or open virtualbox desktop.
+    docker logs <image_ID> # Image ID is the id of the docker image after running docker ps
+    ```
+
 * Check your worker's private key:
 
     ```sh
@@ -242,6 +263,19 @@ You must see your worker name (WORKER_NAME) in the list of workers. You specifie
         publicKey:  0x04a5302a43ff3acac78c16af2f584f2c197f076d81469ccfe95f52ffb061f31855a53e610675dcec94e25a42e5d3c45297fe8040347ab00b156bc03bcd4772f131
         address:    0x587dcc67c6AB1ea86E4AA043a1282d584B05BFCc
     ```
+
+---
+
+## Troubleshooting 
+
+In this chapter we gather possible issues and frequently asked questions
+
+### Strange message after `vagrant up`
+
+Don't worry. Check if you see your worker in grafana dashboard - [WorkerPass WorkerPool Grafana Portal](https://workerpool.iexecenterprise.com)  If it's there - congratulations, your worker runs correctly
+
+![Windows cmd image](images/windows-cmd.png)
+
 
 ---
 
