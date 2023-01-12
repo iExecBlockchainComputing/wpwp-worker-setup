@@ -7,26 +7,21 @@ end
 Vagrant.configure("2") do |config| 
   
   config.vm.box = "iexec/iExec-Worker"  
-  config.vm.box_version = "1.0.1"  
+  config.vm.box_version = "1.0.2"  
   config.vm.boot_timeout=1000 
   config.ssh.insert_key = false  
-  #config.ssh.keys_only=false
-  #config.ssh.insert_key=true
   config.ssh.private_key_path = ["vagrantkeys/vagrant_rsa"]
-  #config.vm.provision "file", source: "vagrantkeys/vagrant_rsa.pub", destination: "/home/vagrant/.ssh/authorized_keys"
 
-
-  #config.ssh.private_key_path = "D:/vagrant/.vagrant.d/insecure_private_key"
-  #config.ssh.insert_key = false
   config.vm.provider :virtualbox do |v|    
     #Display the VirtualBox GUI when booting the machine   
     v.gui = true
-	#set the CPUs used by the VM	
-	v.cpus = "1"
-	# Customize the amount of memory on the VM:
+
+	  #set the CPUs used by the VM	
+	  v.cpus = "1"
+
+	  # Customize the amount of memory on the VM:
     v.memory = 2048
-	v.customize ['modifyvm', :id, '--clipboard', 'bidirectional'] 
-  v.customize [ "modifyvm", :id, "--uartmode1", "disconnected" ] # Disable serial port
+	  v.customize ['modifyvm', :id, '--clipboard', 'bidirectional'] 
   end  
   
   # Update repositories
