@@ -51,6 +51,8 @@ In this readme we focus on starting a worker on a clean already provicioned mach
         ```sh
         PRIVATE_KEY=0x1234... PROD_CORE_HOST=workerpool.iexecenterprise.com ./setup.sh
         ```
+    
+    * Stake 1 RLC - [Follow this instruction](https://github.com/iExecBlockchainComputing/wpwp-worker-setup#8-how-do-i-stake-my-rlc)
 
 ### Additional commands ###
 

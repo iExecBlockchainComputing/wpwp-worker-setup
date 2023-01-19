@@ -31,12 +31,18 @@ In this step pick your operationg system - Linux/Macos/Windows and follow the st
     * [Vagrant- 2.3.2](https://developer.hashicorp.com/vagrant/downloads)
     * [Oracle VM VirtualBox - 7.X](https://www.virtualbox.org/wiki/Downloads)
     * [Git](https://git-scm.com/download/win)
+    * Check if virtualization is enabled on your Windows. Many Windows 10 PCs—and all PCs that come preinstalled with Windows 11—already have virtualization enabled, so you may not need to follow these steps.
+        * [Official Microsoft docs](https://support.microsoft.com/en-us/windows/enable-virtualization-on-windows-11-pcs-c5578302-6e43-4b4b-a449-8ced115f58e1)
+        * [Easier docs with screenshots](https://www.simplilearn.com/enable-virtualization-windows-10-article)
+
 
 * Open termianl - Press Windows+X to open the Power Users menu, and then click “Command Prompt” or “Command Prompt (Admin).”
-![Windows cmd image](images/windows-cmd.png)
 
-Or use terminal provided by git-bash you've installed in the previous step:
-![git-bash CMD image](images/git-bash.png)
+    ![Windows cmd image](images/windows-cmd.png)
+
+    Or use terminal provided by git-bash you've installed in the previous step:
+
+    ![git-bash CMD image](images/git-bash.png)
 
 * Verify the number of CPUs on your machine using terminal:  
 

@@ -160,6 +160,7 @@ Execute the following command to provision your iExec-Worker VM
     # Optionally you can modify that if the worker doesn't want to start
     RESULTS_DIR=/tmp/results # change this to the path you have access to
     ```
+5. Stake 1 RLC - [Follow this instruction](https://github.com/iExecBlockchainComputing/wpwp-worker-setup#8-how-do-i-stake-my-rlc)
 
 ### Start your worker ###
 
