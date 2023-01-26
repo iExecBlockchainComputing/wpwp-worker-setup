@@ -1,6 +1,6 @@
 # README #
 
-This README document the required steps to deploy a worker and join the public Worker Pass Worker Pool
+This README document the required steps to deploy a worker and join the public [Worker Pass Worker Pool](https://explorer.iex.ec/bellecour/workerpool/0x35684fc93dc7e0645d7145a028dd9f7ee954a08c)
 
 ## What is this repository for? ##
 
