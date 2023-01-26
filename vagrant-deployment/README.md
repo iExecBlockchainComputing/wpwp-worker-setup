@@ -221,7 +221,7 @@ First time The whole process will take time (around 10 to 20 mins). So be patien
 
 After worker starts successfully it will take 2 to 3 mins to join the worker pool.
 
-You can confirm that by visiting [WorkerPass WorkerPool Grafana Portal](https://workerpool.iexecenterprise.com) 
+You can confirm that by visiting [WorkerPass WorkerPool Grafana Portal](https://grafana.workerpass.iex.ec/) 
 
 You must see your worker name (WORKER_NAME) in the list of workers. You specified this name in the file `worker_config.properties` and its wallet.
 
@@ -235,7 +235,7 @@ You must see your worker name (WORKER_NAME) in the list of workers. You specifie
           ![Launch worker image](images/launch_worker.png)
       2. Stop iExec Worker: Double-click on it to Stop and remove your worker setup.        
       3. Website: Double-click on it, and it will open [iExec portal] (https://iex.ec/).         
-      4. Statistics: Double click on it, and it will open [WPWP pool Grafana] (https://workerpool.iexecenterprise.com/)	  
+      4. Statistics: Double click on it, and it will open [WPWP pool Grafana] (https://grafana.workerpass.iex.ec/)	  
 
 ### Additional commands ###
 
@@ -278,11 +278,16 @@ In this chapter we gather possible issues and frequently asked questions
 
 ### Strange message after `vagrant up`
 
-Don't worry. Check if you see your worker in grafana dashboard - [WorkerPass WorkerPool Grafana Portal](https://workerpool.iexecenterprise.com)  
+Don't worry. Check if you see your worker in grafana dashboard - [WorkerPass WorkerPool Grafana Portal](https://grafana.workerpass.iex.ec/)  
 If it's there - congratulations, your worker runs correctly
 
 ![Possible error image](images/possible_error.png)
 
+### My worker doesn't receive new tasks
+
+Remember to keep your connection to the pool **as stable as possible**. If you multiple times fail tasks by disconnecting and timing out the tasks, your worker will be punished by PoCo protocol. You might lose your stake or your worker won't receive new tasks and consequently might get blacklisted from the pool.
+
+In that case contact support.
 
 ---
 

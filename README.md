@@ -43,7 +43,7 @@ You can as well verify the number of tasks your worker executed using iExec Expl
 
 ### 6. How can I verify if my worker correctly joined a workerpool? ###
 
-Visit our [grafana](https://workerpool.iexecenterprise.com/) page and look for your wallet in an Active Worker List. If your worker is there it means it is properly connected.
+Visit our [grafana](https://grafana.workerpass.iex.ec/) page and look for your wallet in an Active Worker List. If your worker is there it means it is properly connected.
 
 ### 7. What if my worker is not executing new tasks or is stuck ###
 
@@ -51,6 +51,7 @@ In that case, restart the worker and restart the machine. If that didn't help co
 
 ### 8. How do I stake my RLC
 
+In order to participate in a WPWP campaign you need stake 1 RLC.
 Staking is really easy. You can do it using terminal or using our [iExec market](https://market.iex.ec/). 
 
 1. [iExec market](https://market.iex.ec/) version
@@ -91,13 +92,31 @@ Staking is really easy. You can do it using terminal or using our [iExec market]
 
         ![confirm_deposit](img/console_deposit.png)
 
+### 9. How do I add my NFT to my metamask
+
+It's easy follow the steps in this [video tutorial](https://www.youtube.com/watch?v=nNjiNvQ3b7o)
+1. Add iExec Sidechain as a new network in your metamask.
+    * Network Name: iExec Bellecour Sidechain
+    * New RPC URL: https://bellecour2.iex.ec
+    * Chain ID: 134
+    * Currency symbol: xRLC
+    * Block explorer URL: https://blockscout-bellecour.iex.ec
+2. Click on Assets -> NFTs and import a new NFT.
+    * NFT address: 0x73D0801b1e1e4c9a73680515b668B73e77EFA4c8
+    * ID: Follow point 3 of this FAQ and find the Token ID corresponding to your wallet in the [token inventory](https://blockscout-bellecour.iex.ec/tokens/0x73D0801b1e1e4c9a73680515b668B73e77EFA4c8/inventory)
+3. Properly imported Worker Pass Workerpool NFT should look like that:
+
+![wpwp nft](img/wpwp.png)
 
 ---
 
 ## Disclaimer
 
-Unfortunately, you can't yet run a worker in ARM-based CPU - ( Worker runs only on 64-bit (x84) architecture)   
-It implies that it is **not possible** to run the worker on e.g. MacBooks with M1/M2 ARM-based silicons or AWS EC2 t4g instances. 
+1. Unfortunately, you can't yet run a worker in ARM-based CPU - ( Worker runs only on 64-bit (x84) architecture). It implies that it is **not possible** to run the worker on e.g. MacBooks with M1/M2 ARM-based silicons or AWS EC2 t4g instances. 
+2. Keep your connection to the pool as stable as possible. If you multiple times fail tasks by disconnecting and timing out the tasks, your worker will be punished by PoCo protocol. You might lose your stake or your worker won't receive new tasks and consequently might get blacklisted from the pool.
+3. Instead of burning electricity on the dummy tasks, we support Scientific Research in Physics and Astronomy - [Universe@Home](https://universeathome.pl/universe/description.php). With the Worker Pass Workerpool campaign, we will together discover the cosmos and search for black holes by supporting University Research. It means that our infrastructure is dependent on the Universe@Home scheduler. If their servers go down we won't be able to offer the tasks. In that scenario, we have a backup dApps with prime numbers research project.
+
+
 
 ---
 
