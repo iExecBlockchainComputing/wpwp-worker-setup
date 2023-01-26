@@ -20,7 +20,7 @@ After you verified that you have the NFT in your wallet please confirm you have 
 
 ## Prerequisites
 
-In this step pick your operationg system - Linux/Macos/Windows and follow the steps
+In this step pick your operating system - Linux/macOS/Windows and follow the steps
 
 
 ### Prerequisites Windows ###
@@ -36,15 +36,15 @@ In this step pick your operationg system - Linux/Macos/Windows and follow the st
         * [Easier docs with screenshots](https://www.simplilearn.com/enable-virtualization-windows-10-article)
 
 
-* Open termianl - Press Windows+X to open the Power Users menu, and then click “Command Prompt” or “Command Prompt (Admin).”
+* Open terminal - Press Windows+X to open the Power Users menu, and then click “Command Prompt” or “Command Prompt (Admin).”
 
     ![Windows cmd image](images/windows-cmd.png)
 
-    Or use terminal provided by git-bash you've installed in the previous step:
+    Or use the terminal provided by git-bash you've installed in the previous step:
 
     ![git-bash CMD image](images/git-bash.png)
 
-* Verify the number of CPUs on your machine using terminal:  
+* Verify the number of CPUs on your machine using the terminal:  
 
     ```sh
     $ wmic cpu get NumberOfCores,NumberOfLogicalProcessors
@@ -144,12 +144,12 @@ Remember this instruction won't work on the newest Macbook with M1 silicon
 
 Execute the following command to provision your iExec-Worker VM.  
 
-0. Open terminal 
+0. Open the terminal 
  ![git-bash CMD image](images/git-bash.png)
 
 1. First clone/download this repository - `git clone https://github.com/iExecBlockchainComputing/wpwp-worker-setup.git`
 2. Change directory to vagrant-deployment `cd ./wpwp-worker-setup/vagrant-deployment`
-    You can open this folder in explorer by using mouse cursor or terminal
+    You can open this folder in explorer by using the mouse cursor or terminal
 
     ```sh
     # Windows
@@ -162,9 +162,9 @@ Execute the following command to provision your iExec-Worker VM.
     nautilus .
     ```
 
-3. Configure the following variables in the `worker_config.properties` file in the `wpwp-worker-setup/vagrant-deployment/worker_config.properties` directory - you can use your prefered file viewer like notepad or VScode to modify it.
+3. Configure the following variables in the `worker_config.properties` file in the `wpwp-worker-setup/vagrant-deployment/worker_config.properties` directory - you can use your preferred file viewer like notepad or VScode to modify it.
 
-    * WALLET_PRIVATE_KEY: This must be configured when you want to setup the worker with your existing wallet. You must not set this value if you want to create a new wallet.   
+    * WALLET_PRIVATE_KEY: This must be configured when you want to set up the worker with your existing wallet. You must not set this value if you want to create a new wallet.   
     You can get your private key from metamask by following [this tutorial](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key#:~:text=On%20the%20account%20page%2C%20click,click%20%E2%80%9CConfirm%E2%80%9D%20to%20proceed.)
 
         ```sh
@@ -191,7 +191,7 @@ Execute the following command to provision your iExec-Worker VM.
         
 4. Configure the following variables in the `Vagrantfile` in the path `wpwp-worker-setup/vagrant-deployment/Vagrantfile` - line 21:
 
-    We recommend setting this variable to number of CPU cores available on your machine - 1 e.g. if you have 16 cores set this variable to a maximum of 15.
+    We recommend setting this variable to the number of CPU cores available on your machine - 1 e.g. if you have 16 cores set this variable to a maximum of 15.
     
     This variable determines the maximum computing power you give to your worker. The more CPU cores are available for the worker the more RLC you'll earn.
    
@@ -210,16 +210,16 @@ This will provision a VM for your worker, create, start and connect your worker 
 
 ***Remember you need to have Worker Pass NFT on the worker's wallet.***   
 
-When your worker setup is successfully completed you should see the following message on your screen.
+When your worker setup is completed you should see the following message on your screen.
 
 ```sh
 Worker was successfully started.
 ```
-First time The whole process will take time (around 10 to 20 mins). So be patient and grab some coffee! 
+For the first time, the whole process will take time (around 10 to 20 mins). So be patient and grab some coffee! 
 
 ![Worker Started Successfully](images/worker_setup_success.png)
 
-After worker starts successfully it will take 2 to 3 mins to join the worker pool.
+After the worker starts successfully it will take 2 to 3 mins to join the worker pool.
 
 You can confirm that by visiting [WorkerPass WorkerPool Grafana Portal](https://grafana.workerpass.iex.ec/) 
 
@@ -235,7 +235,7 @@ You must see your worker name (WORKER_NAME) in the list of workers. You specifie
           ![Launch worker image](images/launch_worker.png)
       2. Stop iExec Worker: Double-click on it to Stop and remove your worker setup.        
       3. Website: Double-click on it, and it will open [iExec portal] (https://iex.ec/).         
-      4. Statistics: Double click on it, and it will open [WPWP pool Grafana] (https://grafana.workerpass.iex.ec/)	  
+      4. Statistics: Double click on it, and it will open [WPWP pool Grafana] (https://grafana.workerpass.iex.ec/)    
 
 ### Additional commands ###
 
@@ -245,18 +245,18 @@ You must see your worker name (WORKER_NAME) in the list of workers. You specifie
     vagrant ssh
     ```
 
-* Check if docker image with your worker is running and what is its ID
+* Check if the docker image with your worker is running and what is its ID
 
     ```sh
-    # First you need to connect to the image over ssh or open virtualbox desktop. 
-    # Then open terminal and run
+    # First you need to connect to the image over ssh or open VirtualBox desktop. 
+    # Then open a terminal and run
     docker ps
     ```
 
 * Check worker‘s logs
 
     ```sh
-    # First you need to connect to the image over ssh or open virtualbox desktop.
+    # First you need to connect to the image over ssh or open VirtualBox desktop.
     docker logs <image_ID> # Image ID is the id of the docker image after running docker ps
     ```
 
@@ -274,7 +274,7 @@ You must see your worker name (WORKER_NAME) in the list of workers. You specifie
 
 ## Troubleshooting 
 
-In this chapter we gather possible issues and frequently asked questions
+In this chapter, we gather possible issues and frequently asked questions
 
 ### Strange message after `vagrant up`
 

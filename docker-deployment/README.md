@@ -3,7 +3,7 @@
 Run iExec Worker
 
 * **Quick summary**   
-This README documents the steps to setup a worker and join a workerpool using docker-compose
+This README documents the steps to set up a worker and join a workerpool using docker-compose
 * **Version** - 1.0.0
 
 ---
@@ -34,7 +34,7 @@ To confirm you have that NFT visit:
     ./ setup-ubuntu.sh
     ```
 
-* Verify the number of CPUs on your machine. You'll later assign to your worker number of CPU from your machine:
+* Verify the number of CPUs on your machine. You'll later assign to your worker the number of CPUs from your machine:
 
     ```sh
     $ echo "Threads/core: $(nproc --all)"
@@ -106,7 +106,7 @@ Execute the following command to provision your iExec-Worker VM
 
 1. First clone this repository -   
 `gh repo clone iExecBlockchainComputing/wpwp-worker-setup`
-2. Change directory to docker-deployment   
+2. Change the directory to docker-deployment   
 `cd ./wpwp-worker-setup/docker-deployment`
 3. Create iexec wallet
     * Import your Ethereum wallet using your private key into the wallet file (Remember about the dot at the end!):  
@@ -150,7 +150,7 @@ Execute the following command to provision your iExec-Worker VM
         $ mv UTC--* worker_wallet.json # Rename the wallet file
         ```
 4. Copy contents of .env-defaults to .env and configure the following variables in the .env file:
-    Remember to correctly set the number of availiable CPU.
+    Remember to correctly set the number of available CPUs.
 
     ```sh
     WORKER_AVAILABLE_CPU=2 # This is the number of available CPUs in your machine -1

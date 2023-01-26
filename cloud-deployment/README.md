@@ -1,28 +1,28 @@
 # README #
 
-This README documments cloud deployment of the worker. We will not describe here how to spin AWS EC2 instance or Azure VM.
-In this readme we focus on starting a worker on a clean already provicioned machines.   
+This README documents the cloud deployment of the worker. We will not describe here how to spin an AWS EC2 instance or Azure VM.
+In this readme, we focus on starting a worker on clean already provisioned machines.   
 **Remember you NEED to have Worker Pass NFT on the worker's wallet before connecting to the pool**
 
 ### What is this repository for? ###
 
 * **Quick summary**   
-    This repository provides scripts which setup clean VM and start a worker
+    This repository provides scripts that set up a clean VM and starts a worker
 * **Version:** 1.0.0
 
 ### How do I get set up? ###
 
 * **Summary of set up**
-    1. You need to have provisioned VM - ubuntu or AWS-linux
+    1. You need to have provisioned VM - ubuntu or AWS-Linux
     2. Copy there the correct script in the desired location
     3. Run the script
 
 * **Configuration**   
-    Setup scripts take care of configuring the mahcine and start the worker. You need to make sure you provide required enfironment variables to the script.
+    Setup scripts take care of configuring the machine and starting the worker. You need to make sure you provide the required environment variables to the script.
 * **Dependencies**   
-    You don't need any dependencies installed apart from the clean linux
+    You don't need any dependencies installed apart from the clean Linux
 * **How to run**    
-    You can either run it with .env file or by providing required variables to the script in the command line
+    You can either run it with a .env file or by providing the required variables to the script in the command line
 
     * **Running with .env**  
     copy .env-defaults to .env file and fill it in with your private key to the wallet
@@ -36,12 +36,12 @@ In this readme we focus on starting a worker on a clean already provicioned mach
         WORKER_NAME=My_First_Worker_Name              # Set the name of your worker
         PROD_WALLET_PASSWORD=mySecretPassword         # Change this password to the one you've used for your wallet
 
-        # Availiable CPU for worker will be automatically set to availiable CPU on host machine -1
-        # FORCE_WORKER_AVAILABLE_CPU=1                # uncomment only if you want to force availiable CPU for worker
+        # Available CPU for a worker will be automatically set to available CPU on host machine -1
+        # FORCE_WORKER_AVAILABLE_CPU=1                # uncomment only if you want to force an available CPU for the worker
         ```
         
         Paste the contents of the correct setup script to the file.   
-        Give it a execution rights `sudo chmod +x setup.sh`.    
+        Give it execution rights `sudo chmod +x setup.sh`.    
         Run - `./setup.sh`
 
     * **Running with a command line**  

@@ -5,9 +5,9 @@ This README document the required steps to deploy a worker and join the public [
 ## What is this repository for? ##
 
 * In this repository we show 3 ways of deploying your worker:
-    * **Using vagrant** - this is a one-click deployment for less advanced users. If you don't know how to use command line and docker this is option for you
-    * **Using docker-compose** - for more advanced users. This gives you more control over your worker and allows you to easier debug issues. To follow this steps you need to know how to use docker. We won't teach you basics. In this tutorial we assume you've already used docker and docker-compose
-    * **Using cloud** provisioned VM like AWS EC2 or Azure VM - for users who want to deploy whe worker in a cloud. This tutorial is for really andvanced users who know how to provision computing resources and connect to them. We won't teach you how to do it - we assume you know. In this tutorial we provide you with a one click scripts to fast and easy configure your Virtual Machine and deploy a worker in a cloud
+    * **Using vagrant** - this is a one-click deployment for less advanced users. If you don't know how to use a command line and docker this is an option for you
+    * **Using docker-compose** - for more advanced users. This gives you more control over your worker and allows you to easier debug issues. To follow these steps you need to know how to use docker. We won't teach you the basics. In this tutorial, we assume you've already used docker and docker-compose
+    * **Using cloud** provisioned VM like AWS EC2 or Azure VM - for users who want to deploy the worker in a cloud. This tutorial is for really advanced users who know how to provision computing resources and connect to them. We won't teach you how to do it - we assume you know. In this tutorial, we provide you with a one-click script to fast and easily configure your Virtual Machine and deploy a worker in a cloud
 * Version: 1.0.0
 
 ---
@@ -51,22 +51,22 @@ In that case, restart the worker and restart the machine. If that didn't help co
 
 ### 8. How do I stake my RLC
 
-In order to participate in a WPWP campaign you need stake 1 RLC.
-Staking is really easy. You can do it using terminal or using our [iExec market](https://market.iex.ec/). 
+In order to participate in a WPWP campaign you need to stake 1 RLC.
+Staking is really easy. You can do it using a terminal or using our [iExec market](https://market.iex.ec/). 
 
 1. [iExec market](https://market.iex.ec/) version
     * Visit [iExec market](https://market.iex.ec/) page
-    * Login - in this case we will login with metamask
+    * Login - in this case, we will log in with metamask
 
         ![login](img/login.png)
 
         ![logged-in](img/logged-in.png)
 
-    * Clisk on the account on the top right corner and click deposit. For Worker Pass Worker Pool you'll need to deposit/stake 1 RLC
+    * Click on the account in the top right corner and click deposit. For Worker Pass Worker Pool you'll need to deposit/stake 1 RLC
 
         ![deposit](img/deposit.png)
 
-    * Once you click to the deposit button, metamask will pop up and will ask you to confirm the transaction
+    * Once you click on the deposit button, metamask will pop up and will ask you to confirm the transaction
 
         ![confirm](img/confirm.png)
 
@@ -79,7 +79,7 @@ Staking is really easy. You can do it using terminal or using our [iExec market]
         ```sh
         npm install -g iexec # Install iexec
         mkdir iexec_wallet # Create a new directory
-        cd iexec_wallet # Change direcotry to the one you've created
+        cd iexec_wallet # Change the directory to the one you've created
         iexec init --skip-wallet # Iniciate iexec
         iexec wallet import <privatekey> --keystoredir . # import your wallet
         ```
@@ -94,7 +94,7 @@ Staking is really easy. You can do it using terminal or using our [iExec market]
 
 ### 9. How do I add my NFT to my metamask
 
-It's easy follow the steps in this [video tutorial](https://www.youtube.com/watch?v=nNjiNvQ3b7o)
+It's easy, follow the steps in this [video tutorial](https://www.youtube.com/watch?v=nNjiNvQ3b7o)
 1. Add iExec Sidechain as a new network in your metamask.
     * Network Name: iExec Bellecour Sidechain
     * New RPC URL: https://bellecour2.iex.ec
