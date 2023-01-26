@@ -106,7 +106,7 @@ It's easy follow the steps in this [video tutorial](https://www.youtube.com/watc
     * ID: Follow point 3 of this FAQ and find the Token ID corresponding to your wallet in the [token inventory](https://blockscout-bellecour.iex.ec/tokens/0x73D0801b1e1e4c9a73680515b668B73e77EFA4c8/inventory)
 3. Properly imported Worker Pass Workerpool NFT should look like that:
 
-![wpwp nft](img/wpwp.png)
+   <img src="img/wpwp.png" width="250"/>
 
 ---
 
