@@ -30,7 +30,7 @@ In this readme, we focus on starting a worker on clean already provisioned machi
         ```sh
         # REQUIRED VARIABLES:
         PRIVATE_KEY=0x123                             # Your private key to the wallet
-        PROD_CORE_HOST=workerpool.iexecenterprise.com # This is the IP of the workerpool
+        PROD_CORE_HOST=workerpool.workerpass.iex.ec # This is the IP of the workerpool
 
         # Optional variables:
         WORKER_NAME=My_First_Worker_Name              # Set the name of your worker
@@ -49,7 +49,7 @@ In this readme, we focus on starting a worker on clean already provisioned machi
         Run:  
 
         ```sh
-        PRIVATE_KEY=0x1234... PROD_CORE_HOST=workerpool.iexecenterprise.com ./setup.sh
+        PRIVATE_KEY=0x1234... PROD_CORE_HOST=workerpool.workerpass.iex.ec ./setup.sh
         ```
     
     * Stake 1 RLC - [Follow this instruction](https://github.com/iExecBlockchainComputing/wpwp-worker-setup#8-how-do-i-stake-my-rlc)

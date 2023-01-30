@@ -13,7 +13,7 @@ services:
       - IEXEC_WORKER_SCONTAIN_REGISTRY_PASSWORD=$SCONTAIN_REGISTRY_PASSWORD
       - IEXEC_DEVELOPER_LOGGER_ENABLED=False
       - IEXEC_WORKER_DOCKER_NETWORK_NAME=worker-net
-      - IEXEC_CORE_HOST=${PROD_CORE_HOST:-workerpool.iexecenterprise.com}
+      - IEXEC_CORE_HOST=${PROD_CORE_HOST:-workerpool.workerpass.iex.ec}
       - IEXEC_CORE_PORT=7001
       - IEXEC_CORE_PROTOCOL=https
       - IEXEC_WORKER_WALLET_PATH=/${WALLET:-worker_wallet.json}
