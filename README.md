@@ -84,10 +84,10 @@ Staking is really easy. You can do it using a terminal or using our [iExec marke
         iexec wallet import <privatekey> --keystoredir . # import your wallet
         ```
     
-    * Deposit RLC - value 1000000000 is in nRLC (nano RLC) and is equal to 1 RLC
+    * Deposit 1 RLC
 
         ```sh
-            iexec account deposit 1000000000 --chain bellecour --keystoredir . --wallet-file worker_wallet.json
+            iexec account deposit 1 RLC --chain bellecour --keystoredir . --wallet-file worker_wallet.json
         ```
 
         ![confirm_deposit](img/console_deposit.png)
