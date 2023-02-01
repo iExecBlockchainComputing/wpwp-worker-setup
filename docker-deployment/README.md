@@ -4,6 +4,7 @@ Run iExec Worker
 
 * **Quick summary**   
 This README documents the steps to set up a worker and join a workerpool using docker-compose
+* [Youtube tutorial](https://youtu.be/l6cLSPerBLA)
 * **Version** - 1.0.0
 
 ---

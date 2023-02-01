@@ -5,6 +5,7 @@ Run iExec Worker
 * Quick summary - This README documents the steps to set up a worker and join a workerpool using Vagrant
     * [Vagrant](https://www.vagrantup.com/) - an open-source software product for building and maintaining portable virtual software development environments
     * [VirtualBox](https://www.virtualbox.org/) - an open-source powerful virtualization product for enterprise as well as home use
+* [Youtube tutorial](https://youtu.be/eWB-KTZCcR0)
 * Version - 1.0.0
 
 ---
