@@ -5,9 +5,9 @@ This README document the required steps to deploy a worker and join the public [
 ## What is this repository for? ##
 
 * In this repository we show 3 ways of deploying your worker:
-    * **Using vagrant** - this is a one-click deployment for less advanced users. If you don't know how to use a command line and docker this is an option for you
-    * **Using docker-compose** - for more advanced users. This gives you more control over your worker and allows you to easier debug issues. To follow these steps you need to know how to use docker. We won't teach you the basics. In this tutorial, we assume you've already used docker and docker-compose
-    * **Using cloud** provisioned VM like AWS EC2 or Azure VM - for users who want to deploy the worker in a cloud. This tutorial is for really advanced users who know how to provision computing resources and connect to them. We won't teach you how to do it - we assume you know. In this tutorial, we provide you with a one-click script to fast and easily configure your Virtual Machine and deploy a worker in a cloud
+    * **[Using vagrant](https://github.com/iExecBlockchainComputing/wpwp-worker-setup/tree/main/vagrant-deployment)** - this is a one-click deployment for less advanced users. If you don't know how to use a command line and docker this is an option for you
+    * **[Using docker-compose](https://github.com/iExecBlockchainComputing/wpwp-worker-setup/tree/main/docker-deployment)** - for more advanced users. This gives you more control over your worker and allows you to easier debug issues. To follow these steps you need to know how to use docker. We won't teach you the basics. In this tutorial, we assume you've already used docker and docker-compose
+    * **[Using cloud](https://github.com/iExecBlockchainComputing/wpwp-worker-setup/tree/main/cloud-deployment)** provisioned VM like AWS EC2 or Azure VM - for users who want to deploy the worker in a cloud. This tutorial is for really advanced users who know how to provision computing resources and connect to them. We won't teach you how to do it - we assume you know. In this tutorial, we provide you with a one-click script to fast and easily configure your Virtual Machine and deploy a worker in a cloud
 * Version: 1.0.0
 
 ---
