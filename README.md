@@ -31,25 +31,41 @@ First people confirming, that they are willing to spin their workers and accept 
 Visit: [https://blockscout-bellecour.iex.ec/address/your_wallet_address/tokens](https://blockscout-bellecour.iex.ec/) and verify if you hold the WPWP token   
 ![localImage](img/blockfolio.png)
 
-### 4. How can I check my rewards? ###
+### 4. How do I add my NFT to my metamask
+
+It's easy, follow the steps in this [video tutorial](https://www.youtube.com/watch?v=nNjiNvQ3b7o)
+1. Add iExec Sidechain as a new network in your metamask.
+    * Network Name: iExec Bellecour Sidechain
+    * New RPC URL: https://bellecour2.iex.ec
+    * Chain ID: 134
+    * Currency symbol: xRLC
+    * Block explorer URL: https://blockscout-bellecour.iex.ec
+2. Click on Assets -> NFTs and import a new NFT.
+    * NFT address: 0x73D0801b1e1e4c9a73680515b668B73e77EFA4c8
+    * ID: Follow point 3 of this FAQ and find the Token ID corresponding to your wallet in the [token inventory](https://blockscout-bellecour.iex.ec/tokens/0x73D0801b1e1e4c9a73680515b668B73e77EFA4c8/inventory)
+3. Properly imported Worker Pass Workerpool NFT should look like that:
+
+   <img src="img/wpwp.png" width="250"/>
+
+### 5. How can I check my rewards? ###
 
 Visit: [https://blockscout-bellecour.iex.ec/address/your_wallet_address/tokens](https://blockscout-bellecour.iex.ec/) and check the balance of your wallet.   
 ![blockfolio](img/blockfolio.png)
 
-### 5. How do I monitor my worker ###
+### 6. How do I monitor my worker ###
 
 You can as well verify the number of tasks your worker executed using iExec Explorer
 ![explorer](img/explorer.png)
 
-### 6. How can I verify if my worker correctly joined a workerpool? ###
+### 7. How can I verify if my worker correctly joined a workerpool? ###
 
 Visit our [grafana](https://grafana.workerpass.iex.ec/) page and look for your wallet in an Active Worker List. If your worker is there it means it is properly connected.
 
-### 7. What if my worker is not executing new tasks or is stuck ###
+### 8. What if my worker is not executing new tasks or is stuck ###
 
 In that case, restart the worker and restart the machine. If that didn't help contact iex.ec support.
 
-### 8. How do I stake my RLC
+### 9. How do I stake my RLC
 
 In order to participate in a WPWP campaign you need to stake 1 RLC.
 Staking is really easy. You can do it using a terminal or using our [iExec market](https://market.iex.ec/). 
@@ -92,21 +108,6 @@ Staking is really easy. You can do it using a terminal or using our [iExec marke
 
         ![confirm_deposit](img/console_deposit.png)
 
-### 9. How do I add my NFT to my metamask
-
-It's easy, follow the steps in this [video tutorial](https://www.youtube.com/watch?v=nNjiNvQ3b7o)
-1. Add iExec Sidechain as a new network in your metamask.
-    * Network Name: iExec Bellecour Sidechain
-    * New RPC URL: https://bellecour2.iex.ec
-    * Chain ID: 134
-    * Currency symbol: xRLC
-    * Block explorer URL: https://blockscout-bellecour.iex.ec
-2. Click on Assets -> NFTs and import a new NFT.
-    * NFT address: 0x73D0801b1e1e4c9a73680515b668B73e77EFA4c8
-    * ID: Follow point 3 of this FAQ and find the Token ID corresponding to your wallet in the [token inventory](https://blockscout-bellecour.iex.ec/tokens/0x73D0801b1e1e4c9a73680515b668B73e77EFA4c8/inventory)
-3. Properly imported Worker Pass Workerpool NFT should look like that:
-
-   <img src="img/wpwp.png" width="250"/>
 
 ---
 
