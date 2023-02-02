@@ -71,7 +71,7 @@ To confirm you have that NFT visit:
         ```sh
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
         ```
-    * [Docker](https://docs.docker.com/desktop/install/windows-install/) with docker-compose
+    * [Docker](https://docs.docker.com/desktop/install/mac-install/) with docker-compose
 
         ```sh
         brew install docker
