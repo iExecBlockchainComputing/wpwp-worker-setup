@@ -14,7 +14,7 @@ This README document the required steps to deploy a worker and join the public [
 
 ## FAQ
 
-### 1. When can I join the pool ###
+### 1. When can I join the pool? ###
 
 The pool will accept only workers who hold WorkerPassWorkerPool NFT tokens in their wallets. 
 This is only a utility NFT that gives the holder access to the pool. 
@@ -26,12 +26,12 @@ You can participate in a token drop over this link - [workerpass.iex.ec](https:/
 We will organize 3 drops and you'll have a chance to participate.
 First people confirming, that they are willing to spin their workers and accept terms and conditions, will be granted the token.
 
-### 3. How can I verify if I own the NFT ###
+### 3. How can I verify if I own the NFT? ###
 
 Visit: [https://blockscout-bellecour.iex.ec/address/your_wallet_address/tokens](https://blockscout-bellecour.iex.ec/) and verify if you hold the WPWP token   
 ![localImage](img/blockfolio.png)
 
-### 4. How do I add my NFT to my metamask
+### 4. How do I add my NFT to my metamask? ###
 
 It's easy, follow the steps in this [video tutorial](https://www.youtube.com/watch?v=nNjiNvQ3b7o)
 1. Add iExec Sidechain as a new network in your metamask.
@@ -52,7 +52,7 @@ It's easy, follow the steps in this [video tutorial](https://www.youtube.com/wat
 Visit: [https://blockscout-bellecour.iex.ec/address/your_wallet_address/tokens](https://blockscout-bellecour.iex.ec/) and check the balance of your wallet.   
 ![blockfolio](img/blockfolio.png)
 
-### 6. How do I monitor my worker ###
+### 6. How do I monitor my worker? ###
 
 You can as well verify the number of tasks your worker executed using iExec Explorer
 ![explorer](img/explorer.png)
@@ -61,11 +61,11 @@ You can as well verify the number of tasks your worker executed using iExec Expl
 
 Visit our [grafana](https://grafana.workerpass.iex.ec/) page and look for your wallet in an Active Worker List. If your worker is there it means it is properly connected.
 
-### 8. What if my worker is not executing new tasks or is stuck ###
+### 8. What if my worker is not executing new tasks or is stuck? ###
 
 In that case, restart the worker and restart the machine. If that didn't help contact iex.ec support.
 
-### 9. How do I stake my RLC
+### 9. How do I stake my RLC? ###
 
 In order to participate in a WPWP campaign you need to stake 1 RLC.
 Staking is really easy. You can do it using a terminal or using our [iExec market](https://market.iex.ec/). 
@@ -108,6 +108,15 @@ Staking is really easy. You can do it using a terminal or using our [iExec marke
 
         ![confirm_deposit](img/console_deposit.png)
 
+### 9. How do move my RLC between mainnet and sidechain?
+
+Moving RLC between chains is easy! If you need to move RLC from mainnet to sichechain just open the [iExec market](https://market.iex.ec/).
+Pick the chain - mainnet and click transfer to sidechain.  
+Remember tokens in the sidechain have the same value as the one in the mainnet!
+
+![moving](./img/moving.png)
+
+![moving RLC](./img/movingRLC.png)
 
 ---
 
