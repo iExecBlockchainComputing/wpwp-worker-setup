@@ -209,6 +209,12 @@ vagrant up
 ```
 This will provision a VM for your worker, create, start and connect your worker to our workerpool.
 
+Remember VirtualBox is much slower than Vagrant. The Vagrant will try to connect to the VirtualBox multiple times until the VirtualBox is ready and let him in. Multiple authentication errors are perfectly normal, just relax, brew some coffee, and wait.
+
+![vagrant booting](./images/vagrant_booting.png)
+
+
+
 ***Remember you need to have Worker Pass NFT on the worker's wallet.***   
 
 When your worker setup is completed you should see the following message on your screen.
