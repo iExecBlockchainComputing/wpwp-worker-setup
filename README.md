@@ -108,7 +108,7 @@ Staking is really easy. You can do it using a terminal or using our [iExec marke
 
         ![confirm_deposit](img/console_deposit.png)
 
-### 9. How do move my RLC between mainnet and sidechain?
+### 10. How do move my RLC between mainnet and sidechain?
 
 Moving RLC between chains is easy! If you need to move RLC from mainnet to sichechain just open the [iExec market](https://market.iex.ec/).
 Pick the chain - mainnet and click transfer to sidechain.  
