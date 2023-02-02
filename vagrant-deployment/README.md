@@ -290,6 +290,19 @@ If it's there - congratulations, your worker runs correctly
 
 ![Possible error image](images/possible_error.png)
 
+### I messed up the configuration or the VM
+
+If you messed up your configuration, in the `wpwp-worker-setup/vagrant-deployment/` directory run `vagrant destroy` command:
+
+```sh
+$ vagrant destroy
+mkdir: vagrantkeys: File exists
+Keys found..
+    default: Are you sure you want to destroy the 'default' VM? [y/N] y
+==> default: Destroying VM and associated drives...
+```
+And *restart* your machine - it always helps. 
+
 ### My worker doesn't receive new tasks
 
 Remember to keep your connection to the pool **as stable as possible**. If you multiple times fail tasks by disconnecting and timing out the tasks, your worker will be punished by PoCo protocol. You might lose your stake or your worker won't receive new tasks and consequently might get blacklisted from the pool.
