@@ -71,14 +71,13 @@ To confirm you have that NFT visit:
         ```sh
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
         ```
-    * [Docker](https://docs.docker.com/desktop/install/mac-install/) with docker-compose
+    * [Docker](https://docs.docker.com/desktop/install/mac-install/) with docker-compose - just install an entire docker desktop
 
         ```sh
-        brew install docker
-        brew install docker-compose
+        brew install --cask docker
         ```
 
-    * Install Node at least v16 - we recommend using [nvm](https://github.com/coreybutler/nvm-windows#readme)
+    * Install Node at least v16 - we recommend using [nvm](https://github.com/nvm-sh/nvm#install--update-script)
 
         ```sh
         brew install nvm
