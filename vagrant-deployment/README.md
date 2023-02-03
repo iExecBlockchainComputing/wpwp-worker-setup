@@ -23,6 +23,9 @@ After you verified that you have the NFT in your wallet please confirm you have 
 
 In this step pick your operating system - Linux/macOS/Windows and follow the steps
 
+If you don't know how to use git and are scared of terminal you can just download this repository as ZIP.
+
+![Download Repo](./images/Download_Repo.png)
 
 ### Prerequisites Windows ###
 
