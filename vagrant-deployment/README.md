@@ -6,6 +6,7 @@ Run iExec Worker
     * [Vagrant](https://www.vagrantup.com/) - an open-source software product for building and maintaining portable virtual software development environments
     * [VirtualBox](https://www.virtualbox.org/) - an open-source powerful virtualization product for enterprise as well as home use
 * [Youtube tutorial](https://youtu.be/eWB-KTZCcR0)
+* [Youtube tutorial for Windows](https://youtu.be/qAe91gAlfZA)
 * Version - 1.0.0
 
 ---
