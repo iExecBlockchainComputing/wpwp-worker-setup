@@ -125,6 +125,9 @@ Remember tokens in the sidechain have the same value as the one in the mainnet!
 1. Unfortunately, you can't yet run a worker in ARM-based CPU - ( Worker runs only on 64-bit (x84) architecture). It implies that it is **not possible** to run the worker on e.g. MacBooks with M1/M2 ARM-based silicons or AWS EC2 t4g instances. 
 2. Keep your connection to the pool as stable as possible. If you multiple times fail tasks by disconnecting and timing out the tasks, your worker will be punished by PoCo protocol. You might lose your stake or your worker won't receive new tasks and consequently might get blacklisted from the pool.
 3. Instead of burning electricity on the dummy tasks, we support Scientific Research in Physics and Astronomy - [Universe@Home](https://universeathome.pl/universe/description.php). With the Worker Pass Workerpool campaign, we will together discover the cosmos and search for black holes by supporting University Research. It means that our infrastructure is dependent on the Universe@Home scheduler. If their servers go down we won't be able to offer the tasks. In that scenario, we have a backup dApps with prime numbers research project.
+4. Number of RLC your worker generates is directly proportional to the strength of your machine. The more and the faster it delivers tasks the more RLC you make. e.g.  Worker with the new intel i9 3.8 GHz CPU will complete tasks faster, than the worker with an old intel i3 1.3 GHz CPU.
+5. We can't guarantee that your machine and OS will be able to run the worker correctly. Worker requires significant resources and enabled virtualization. Some of the Windows Home edition computers has virtualization blocked.
+6. Tasks assigned to your worker are random. 
 
 
 

@@ -313,6 +313,12 @@ Remember to keep your connection to the pool **as stable as possible**. If you m
 
 In that case contact support.
 
+### Disclaimer
+
+1. Number of RLC your worker generates is directly proportional to the strength of your machine. The more and the faster it delivers tasks, the more RLC you make. e.g.  Worker with the new intel i9 3.8 GHz CPU will complete tasks faster, than the worker with an old intel i3 1.3 GHz CPU.
+2. We can't guarantee that your machine and OS will be able to run the worker correctly. Worker requires significant resources and enabled virtualization. Some of the Windows Home edition computers has virtualization blocked. Antivirus or non-standard permissions might result in problems with the deployment.
+3. Tasks assigned to your worker are random. 
+
 ---
 
 ## Who do I talk to? ##
