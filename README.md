@@ -68,45 +68,24 @@ In that case, restart the worker and restart the machine. If that didn't help co
 ### 9. How do I stake my RLC? ###
 
 In order to participate in a WPWP campaign you need to stake 1 RLC.
-Staking is really easy. You can do it using a terminal or using our [iExec market](https://market.iex.ec/). 
+Staking is really easy. You can do it using a terminal.
 
-1. [iExec market](https://market.iex.ec/) version
-    * Visit [iExec market](https://market.iex.ec/) page
-    * Login - in this case, we will log in with metamask
+* Setup iExec CLI and import your wallet
+```sh
+npm install -g iexec # Install iexec
+mkdir iexec_wallet # Create a new directory
+cd iexec_wallet # Change the directory to the one you've created
+iexec init --skip-wallet # Initiate iexec
+iexec wallet import <privatekey> --keystoredir . # import your wallet
+```
 
-        ![login](img/login.png)
+* Deposit 1 RLC
 
-        ![logged-in](img/logged-in.png)
+```sh
+iexec account deposit 1 RLC --chain bellecour --keystoredir . --wallet-file worker_wallet.json
+```
 
-    * Click on the account in the top right corner and click deposit. For Worker Pass Worker Pool you'll need to deposit/stake 1 RLC
-
-        ![deposit](img/deposit.png)
-
-    * Once you click on the deposit button, metamask will pop up and will ask you to confirm the transaction
-
-        ![confirm](img/confirm.png)
-
-    * Congratulations! You've just staked your first RLC
-
-        ![success](img/success.png)
-    
-2. For more advanced users you can do it using iExec CLI
-    * Setup iExec CLI and import your wallet
-        ```sh
-        npm install -g iexec # Install iexec
-        mkdir iexec_wallet # Create a new directory
-        cd iexec_wallet # Change the directory to the one you've created
-        iexec init --skip-wallet # Iniciate iexec
-        iexec wallet import <privatekey> --keystoredir . # import your wallet
-        ```
-    
-    * Deposit 1 RLC
-
-        ```sh
-            iexec account deposit 1 RLC --chain bellecour --keystoredir . --wallet-file worker_wallet.json
-        ```
-
-        ![confirm_deposit](img/console_deposit.png)
+![confirm_deposit](img/console_deposit.png)
 
 ### 10. How do move my RLC between mainnet and sidechain?
 
