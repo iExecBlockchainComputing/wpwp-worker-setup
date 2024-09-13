@@ -80,9 +80,9 @@ iexec wallet import <privatekey> --keystoredir . # import your wallet
 ```
 
 * Deposit 1 RLC
-
+Replace UTC-Y-M-XXXX with the imported wallet filename.
 ```sh
-iexec account deposit 1 RLC --chain bellecour --keystoredir . --wallet-file worker_wallet.json
+iexec account deposit 1 RLC --chain bellecour --keystoredir . --wallet-file UTC-Y-M-XXXX 
 ```
 
 ![confirm_deposit](img/console_deposit.png)
