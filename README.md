@@ -80,22 +80,14 @@ iexec wallet import <privatekey> --keystoredir . # import your wallet
 ```
 
 * Deposit 1 RLC
-Replace UTC-Y-M-XXXX with the imported wallet filename.
+
+(Replace UTC-Y-M-XXXX with the imported wallet filename.)
+
 ```sh
 iexec account deposit 1 RLC --chain bellecour --keystoredir . --wallet-file UTC-Y-M-XXXX 
 ```
 
 ![confirm_deposit](img/console_deposit.png)
-
-### 10. How do move my RLC between mainnet and sidechain?
-
-Moving RLC between chains is easy! If you need to move RLC from mainnet to sichechain just open the [iExec market](https://market.iex.ec/).
-Pick the chain - mainnet and click transfer to sidechain.  
-Remember tokens in the sidechain have the same value as the one in the mainnet!
-
-![moving](./img/moving.png)
-
-![moving RLC](./img/movingRLC.png)
 
 ---
 
